@@ -96,6 +96,7 @@
                                  [binaryage/devtools "0.9.4"]
                                  [com.cemerick/piggieback "0.2.2"]
                                  [doo "0.1.7"]
+                                 [org.clojure/test.check "0.9.0"]
                                  [figwheel-sidecar "0.5.11"]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.19.0"]
                                  [lein-doo "0.1.7"]
