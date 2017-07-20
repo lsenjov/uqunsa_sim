@@ -31,11 +31,11 @@ INSERT INTO regions
 VALUES (:id, :name, :regionx, :regiony, :object)
 ON DUPLICATE KEY UPDATE id = :id;
 
--- :name get-all-regions
+-- :name get-all-regions :? :*
 -- :doc Returns all regions
 SELECT * FROM regions;
 
--- :name get-region
+-- :name get-region :1
 -- :doc Gets a region by either id or name
 SELECT * FROM regions
 WHERE (id = :search)
