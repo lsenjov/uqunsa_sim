@@ -29,7 +29,8 @@
 (defn get-region
   "Returns either a region with the same uid/uname, or nil"
   [search]
-  (first (db/get-region {:search search})))
+  (if-let [region (first (db/get-region {:search search}))]
+    (clojure.edn/read-string (:object region))))
 
 (comment
   (get-all-regions)
