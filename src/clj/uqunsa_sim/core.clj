@@ -62,3 +62,7 @@
     :else
     (start-app args)))
   
+(comment
+  (start-app ["-p" "3000"])
+  (stop-app)
+  )

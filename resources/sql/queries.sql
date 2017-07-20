@@ -19,3 +19,25 @@ WHERE id = :id
 -- :doc delete a user given the id
 DELETE FROM users
 WHERE id = :id
+
+
+--------------------
+-- Regions
+--------------------
+-- :name create-region! :! :n
+-- :doc Adds a region to the table
+INSERT INTO regions
+(id, name, regionx, regiony, object)
+VALUES (:id, :name, :regionx, :regiony, :object)
+ON DUPLICATE KEY UPDATE id = :id;
+
+-- :name get-all-regions
+-- :doc Returns all regions
+SELECT * FROM regions;
+
+-- :name get-region
+-- :doc Gets a region by either id or name
+SELECT * FROM regions
+WHERE (id = :search)
+OR (name LIKE :search);
+
